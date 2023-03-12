@@ -9,6 +9,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800&family=Open+Sans&family=Urbanist&display=swap"
 		rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
 	<title>Промстроймаш</title>
 </head>
 
@@ -210,42 +211,19 @@
 			</li>
 		</ul>
 	</footer>
-	<script src="/plugins/jquery.min.js"></script>
-	<script src="/plugins/colorbox/jquery.colorbox-min.js"></script>
-
-
-
-	<script>
-		let cboxOptions = {
-			width: '100%',
-			height: '100%',
-			maxWidth: '800px',
-			maxHeight: '800px',
-		}
-		$('.gal').colorbox({
-			'onComplete': function () {
-				$('#cboxLoadedContent').zoom();
-			}
-		});
-		$('.gal').colorbox(cboxOptions);
-
-		$(window).resize(function () {
-			$.colorbox.resize({
-				width: window.innerWidth > parseInt(cboxOptions.maxWidth) ? cboxOptions.maxWidth : cboxOptions.width,
-				height: window.innerHeight > parseInt(cboxOptions.maxHeight) ? cboxOptions.maxHeight : cboxOptions.height
-			});
-		});
-		$('.gal').colorbox({ rel: '.gal', width: '90%' });
-
-
-		$(function () {
-			$('.gal').colorbox({
-				rel: 'gal'
-			})
-		});
-
-
-
+	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+  <script>
+    $(".services__gallery").magnificPopup({
+      delegate: "a",
+      type: "image",
+      gallery: {
+    enabled: true
+      }
+    });
+  </script>
+	
 
 
 
