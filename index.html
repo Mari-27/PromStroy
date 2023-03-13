@@ -9,7 +9,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Inter:wght@100;200;300;400;500;600;700;800&family=Open+Sans&family=Urbanist&display=swap"
 		rel="stylesheet">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.css">
 	<title>Промстроймаш</title>
 </head>
 
@@ -17,7 +17,7 @@
 	<header class="header">
 		<div class="container">
 			<div class="headline">
-				<div class="logo">
+				<div class="footer__logo">
 					<img src="img/логотип.svg" alt="лого">
 				</div>
 				<nav class="contacts">
@@ -27,12 +27,12 @@
 						</li>
 						</li>
 						<li class="contact__list__item">
-							<a href="mailto:.ru" class="contact__list__link">Напишите нам</a>
+							<a href="mailto:.ru" class="contact__list__link">ALFA-LOGICA@yandex.ru</a>
 						</li>
 					</ul>
 				</nav>
 			</div>
-			<p class="header__subtitle">Стремимся быть лучше</p>
+			<p class="header__subtitle">Стремимся быть лучшими</p>
 			<h1 class="header__title">
 				Изготовление металлоконструкций
 			</h1>
@@ -71,7 +71,7 @@
 				</div>
 			</div>
 		</section>
-		
+
 
 		<section class="services">
 			<div class="container">
@@ -174,56 +174,73 @@
 			</div>
 		</section>
 	</main>
-
+	<!--
+	
+-->
 	<footer class="footer">
-		<div class="footer__addr">
-			<img class="footer__logo" src="img/логотип.svg" alt="">
+		<div class="container">
+			<div class="footer__adress">
+				<div class="footer__logo">
+					<img class="footer__logo" src="img/логотип.svg" alt="">
+				</div>
+
+				<div class="footer-col">
+					<h3 class="nav__title">Документы</h3>
+					<ul class="nav__ul">
+						<li>
+							<a href="#">ООО "ПРОМСТРОЙМАШ</a>
+						</li>
+
+						<li>
+							<a href="#">ИНН/КПП 5948064910/594801001</a>
+						</li>
+
+						<li>
+							<a href="#">ОГРН 1225900011336 от 16.06.2022</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-col">
+					<h2 class="nav__title">Контакты</h2>
+					<ul class="nav__ul nav__ul--adress">
+						<li>
+							<a class="footer__contact" href="mailto:ALFA-LOGICA@yandex.ru">ALFA-LOGICA@yandex.ru</a>
+						</li>
+
+						<li>
+							<a href="tel:+79504434224" class="footer__contact-mail">8-(950)-44-34-224</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
 		</div>
 
-		<ul class="footer__nav">
-			<li class="nav__item">
-				<h2 class="nav__title">Документы</h2>
+		</div>
 
-				<ul class="nav__ul">
-					<li>
-						<a href="#">ООО "ПРОМСТРОЙМАШ</a>
-					</li>
 
-					<li>
-						<a href="#">ИНН/КПП 5948064910/594801001</a>
-					</li>
-
-					<li>
-						<a href="#">ОГРН 1225900011336 от 16.06.2022</a>
-					</li>
-				</ul>
-			<li class="nav__item nav__item--extra">
-				<h2 class="nav__title">Контакты</h2>
-
-				<ul class="nav__ul nav__ul--adress">
-					<li>
-						<a class="footer__btn" href="mailto:ALFA-LOGICA@yandex.ru">Напишите нам</a>
-					</li>
-
-					<li>
-						<a href="tel:+79504434224" class="footer__btn">8-(950)-44-34-224</a>
-					</li>
-			</li>
-		</ul>
 	</footer>
-	<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
-  <script>
-    $(".services__gallery").magnificPopup({
-      delegate: "a",
-      type: "image",
-      gallery: {
-    enabled: true
-      }
-    });
-  </script>
-	
+
+
+	<!--
+			<footer class="footer">
+		
+	</footer>
+	-->
+
+	<script src="https://code.jquery.com/jquery-3.5.1.js"
+		integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.js"></script>
+	<script>
+		$(".services__gallery").magnificPopup({
+			delegate: "a",
+			type: "image",
+			gallery: {
+				enabled: true
+			}
+		});
+	</script>
+
 
 
 
