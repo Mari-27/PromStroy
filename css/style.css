@@ -120,12 +120,15 @@ main {
 .headline {
     display: flex;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
     position: relative;
     padding-left: 20px;
     padding-right: 20px;
 }
-
+.header__title_sub {
+    text-align: center;
+}
 .headline::before {
     content: '';
     position: absolute;
@@ -144,6 +147,12 @@ main {
 
 }
 
+.header__title {
+    text-align: center;
+}
+.btn-connection {
+        visibility: hidden;
+    }
 
 .logo img {
     width: 150px;
@@ -161,6 +170,28 @@ main {
     .header__title {
         font-size: 20px;
     }
+
+    .btn-connection {
+            display: block;
+            visibility: visible;
+            font-size: 17px;
+            text-align: center;
+            letter-spacing: 0.1em;
+            padding: 17px 37px;
+            border-radius: 6px;
+            color: #fff;
+            border: 1px solid #fff;
+            width: 238px;
+            transition: all 0.5s ease;
+            margin: 0 auto;
+            margin-bottom: 30px;
+    }
+
+    .btn-connection:hover {
+        background: #fff;
+        color: #000;
+    }
+
 
 
     .img__logo {
@@ -214,6 +245,8 @@ a[href^="tel:"] {
         display: block;
         padding: 16px 30px;
     }
+
+    
 }
 
 @media (max-width: 640px) {
@@ -242,6 +275,7 @@ a[href^="tel:"] {
     width: 238px;
     transition: all 0.5s ease;
     margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 .btn:hover {
@@ -251,12 +285,13 @@ a[href^="tel:"] {
 
 .about {
     color: #fff;
+    margin-bottom: 40px;
 }
 
 .about__content {
     display: flex;
     flex-basis: auto;
-    padding: 20px 0px 40px;
+    padding: 20px 0px;
     color: #fff;
 }
 
@@ -277,19 +312,19 @@ a[href^="tel:"] {
     display: flex;
     flex-direction: row;
     margin: 0 auto;
-    padding: 20px;
     list-style: none;
     gap: 24px;
 }
 
 .about__item {
-    padding: 10px 50px 6px 90px;
+    padding: 10px 50px 6px 80px;
     background-position: left center;
     background-repeat: no-repeat;
-    background-repeat: 70px;
-    background-size: 70px;
-    min-height: 70px;
+    background-repeat: 60px;
+    background-size: 60px;
+    min-height: 60px;
     text-align: center;
+   
 }
 
 .about__item_prof {
@@ -317,43 +352,27 @@ a[href^="tel:"] {
 }
 
 @media (min-width: 641px) and (max-width: 1199px) {
-    .about__item {
-        background-repeat: 50px;
-        background-size: 50px;
-        min-height: 50px;
-        padding: 10px 0px 6px 60px;
+
+    .about__description {
+        font-size: 14px;
+    }
+
+    .about__content {
+        display: flex; 
+        align-items: center;
+      
+    
+    }
+
+   .about__item {
+    padding: 60px 20px 0px;
+    font-size: 14px;
+    background-repeat: 50px;
+    background-size: 50px;
+    min-height: 50px;
+    
     }
 }
-
-@media (max-width:760px) {
-    .about__content-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-
-    }
-
-    .about__list {
-        display: flex;
-        flex-direction: column;
-
-    }
-
-    .about__item {
-        background-size: 30px;
-        padding: 10px 0px 6px 40px;
-    }
-}
-
-/*
-
-
-
-
-
-
-
-
 
 @media (max-width: 1024px) {
     .about__description {
@@ -362,66 +381,58 @@ a[href^="tel:"] {
 
    
     .about__item {
-        padding-left: 0;
-        padding-top: 96px;
-        background-position: top left;
+        background-position: top center;
     }
 }
 
 
 
 @media (max-width: 560px) {
-    .about {
-        padding: 20px 0;
-    }
 
+    
     .about__list {
+        display: flex;
        flex-direction: column;
+       justify-content: center;
        align-items: center;
     }
-
+    .about__item-title {
+        font-size: 16px;
+    }
     .about__title {
-        font-size: 20px;
+        font-size: 18px;
         margin-bottom: 16px;
     }
 
     .about__description {
-        font-size: 12px;
+        font-size: 14px;
     }
 
     .about__item {
-        padding-left: 72px;
+        padding: 60px 20px 0px;
         min-height: 50px;
         background-size: 50px;
+        font-size: 14px;
     }
 }
-*/
 
 .services__title {
-    padding-bottom: 30px;
     font-size: 30px;
     text-align: center;
     color: #fff;
+    margin-bottom: 40px;
 }
 
 .services__wrapper-content {
     display: flex;
-    justify-content: space-between;
-
-
+    gap: 100px;
 }
-
-.services__content {
-    display: flex;
-    flex-basis: auto;
-    color: #fff;
-
-}
-
 
 .services__list {
+    display: flex;
+    flex-direction: column;
     padding: 0;
-    color: #fff;
+    color: #fff;  
 }
 
 .services__item {
@@ -432,6 +443,7 @@ a[href^="tel:"] {
     padding-top: 5px;
     border-bottom: 1px solid #BFBDB2;
     padding-bottom: 20px;
+
 }
 
 .services__gallery {
@@ -439,6 +451,7 @@ a[href^="tel:"] {
     grid-template-columns: repeat(8, 1fr);
     grid-template-rows: repeat(8, 5vw);
     grid-gap: 10px;
+    max-width: 700px;
 
 }
 
@@ -512,19 +525,24 @@ a[href^="tel:"] {
     }
 
     .services__list {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
 
     .services__item {
-        font-size: 16px;
+        font-size: 14px;
         padding-bottom: 15px;
-        margin-bottom: 20px;
+        margin-bottom: 20px; 
+        text-align: center;
     }
+
+    
 
     .services__wrapper-content {
         flex-direction: column;
         justify-content: center;
+        gap: 50px;
 
     }
 
@@ -538,13 +556,20 @@ a[href^="tel:"] {
         max-height: 300px;
     }
 
+    .services__title {
+        font-size: 18px;
+    }
+
 }
 
 @media (max-width: 560px) {
-    .services__item {
+    .services__item-title {
         font-size: 16px;
         padding-bottom: 10px;
-    }
+        text-align: center; 
+        
+    } 
+   
 }
 
 footer {
@@ -565,6 +590,7 @@ footer {
 .footer-col ul li a {
     color: #fff;
     font-size: 14px;
+    padding-bottom: 20px;
 }
 .nav__title {
     color: #fff;
@@ -580,13 +606,17 @@ footer {
  }
 
  @media(max-width: 767px){
-    .footer__logo {
-        margin-bottom: 30px;
+    .footer__logo  { 
+        margin: 0 auto; 
+        padding-bottom: 30px;
+      
+    
     }
     .footer-col{
       width: 50%;
       margin-bottom: 30px;
       text-align: center;
+    
   }
   }
   @media(max-width: 574px){
